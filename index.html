@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>זמרת יוצרת דרך | סדנה לזמרות יוצרות</title>
-    <meta name="description" content="השיטה האסטרטגית לפיצוח זהות וקהל יעד בדרך לבמה ולשירים שלך. סדנה ייחודית לזמרות יוצרות.">
+    <meta name="description" content="השיטה האסטרטגית לפיצוח זהות וקהל יעד בדרך לבמה ושירים שלך. סדנה ייחודית לזמרות יוצרות.">
     
-    <!-- Google Fonts - Rubik -->
+    <!-- Google Fonts - Open Sans Hebrew -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300;700&display=swap" rel="stylesheet">
     
     <style>
         /* ============================================
@@ -48,11 +49,11 @@
         }
 
         body {
-            font-family: 'Rubik', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: var(--deep-midnight-violet);
             color: var(--silver-mist);
             line-height: 1.7;
-            font-weight: 300;
+            font-weight: 400;
             overflow-x: hidden;
         }
 
@@ -115,7 +116,7 @@
                 var(--electric-cyan) 0%, 
                 var(--royal-magenta) 100%);
             color: var(--pure-white);
-            font-family: 'Rubik', sans-serif;
+            font-family: 'Open Sans', sans-serif;
             font-weight: 700;
             font-size: 1.1rem;
             padding: 18px 40px;
@@ -282,61 +283,141 @@
             object-position: left center;
         }
 
+        /* Dark gradient overlay for text readability */
         .hero-background::after {
             content: '';
             position: absolute;
             inset: 0;
-            background: none;
-            /* Original filter - uncomment to restore:
             background: linear-gradient(
                 to left,
-                rgba(26, 11, 46, 0.95) 0%,
-                rgba(26, 11, 46, 0.85) 45%,
-                rgba(26, 11, 46, 0.3) 100%
+                rgba(26, 11, 46, 0.97) 0%,
+                rgba(26, 11, 46, 0.95) 35%,
+                rgba(26, 11, 46, 0.7) 55%,
+                rgba(26, 11, 46, 0.2) 75%,
+                transparent 100%
             );
-            */
         }
 
         .hero-content {
             position: relative;
             z-index: 1;
-            max-width: 800px;
-            padding: 2rem 3rem;
+            max-width: 650px;
+            padding: 1.5rem 2.5rem;
             text-align: right;
         }
 
+        /* Hero upper title - Open Sans Condensed */
+        /* 1. Eyebrow - שורה עליונה */
         .hero-small-title {
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
             color: var(--soft-harmony-rose);
-            font-size: 1.4rem;
+            font-size: 20px;
             font-weight: 400;
-            margin-bottom: 1.5rem;
-            text-shadow: 0 0 20px var(--rose-glow);
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            margin-bottom: 2rem;
-            background: var(--brand-gradient);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            text-shadow: none;
-            filter: drop-shadow(0 0 30px var(--cyan-glow));
-            white-space: nowrap;
-        }
-
-        .hero-subtitle {
-            font-size: 1.8rem;
-            color: var(--pure-white);
-            font-weight: 400;
-            margin-bottom: 2rem;
-            line-height: 1.5;
-        }
-
-        .hero-text {
-            font-size: 1.3rem;
             margin-bottom: 1rem;
-            line-height: 1.9;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            letter-spacing: 1px;
+            line-height: 1.4;
+        }
+
+        /* 2. Main Title H1 - כותרת ראשית */
+        .hero h1 {
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+            font-size: 90px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            color: var(--pure-white);
+            text-shadow: 0 4px 20px rgba(0, 0, 0, 0.6),
+                         0 0 40px rgba(255, 255, 255, 0.15);
+            white-space: nowrap;
+            line-height: 1.1;
+        }
+
+        /* 3. Sub-headline H2 - כותרת משנה */
+        .hero-subtitle {
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+            font-size: 32px;
+            color: var(--pure-white);
+            font-weight: 600;
+            margin-bottom: 30px;
+            line-height: 1.3;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero-subtitle .highlight {
+            color: var(--electric-cyan);
+        }
+
+        /* 4. Body Paragraph - טקסט רץ */
+        .hero-text {
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+            font-size: 20px;
+            font-weight: 400;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+            text-shadow: 0 1px 5px rgba(0, 0, 0, 0.4);
+            max-width: 600px;
+        }
+
+        /* 5. Pre-CTA - משפט הנעה לפעולה */
+        .hero-pre-cta {
+            font-family: 'Open Sans Condensed', 'Open Sans', sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--electric-cyan);
+            margin-top: 40px;
+            margin-bottom: 15px;
+            text-shadow: 0 0 20px var(--cyan-glow);
+        }
+
+        /* Scroll Indicator - Elegant Design */
+        .scroll-indicator {
+            position: absolute;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            cursor: pointer;
+            z-index: 10;
+            opacity: 0.6;
+            transition: opacity 0.3s ease;
+        }
+
+        .scroll-indicator:hover {
+            opacity: 1;
+        }
+
+        .scroll-indicator .chevron {
+            width: 14px;
+            height: 14px;
+            border-right: 2px solid var(--electric-cyan);
+            border-bottom: 2px solid var(--electric-cyan);
+            transform: rotate(45deg);
+            animation: chevron-bounce 2s ease-in-out infinite;
+            filter: drop-shadow(0 0 4px var(--cyan-glow));
+        }
+
+        .scroll-indicator .scroll-text {
+            font-family: 'Open Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            color: var(--electric-cyan);
+            text-shadow: 0 0 8px var(--cyan-glow);
+        }
+
+        @keyframes chevron-bounce {
+            0%, 100% {
+                transform: rotate(45deg) translateY(0);
+                opacity: 0.6;
+            }
+            50% {
+                transform: rotate(45deg) translateY(5px);
+                opacity: 1;
+            }
         }
 
         /* ============================================
@@ -362,6 +443,14 @@
                         0 0 15px var(--magenta-glow);
         }
 
+        .workshop-subtitle {
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--soft-text);
+            margin: 0.5rem 0 1.5rem;
+            line-height: 1.6;
+        }
+
         .details-grid {
             display: grid;
             gap: 1.5rem;
@@ -372,19 +461,24 @@
             display: flex;
             align-items: center;
             gap: 1rem;
-            font-size: 1.15rem;
+            font-size: 1.5rem;
         }
 
         .detail-icon {
-            font-size: 1.6rem;
             min-width: 45px;
             height: 45px;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(0, 240, 255, 0.1);
+            background: transparent;
             border-radius: 10px;
-            border: 1px solid rgba(0, 240, 255, 0.2);
+            border: 1.5px solid var(--royal-magenta);
+            color: var(--royal-magenta);
+        }
+
+        .detail-icon svg {
+            width: 24px;
+            height: 24px;
         }
 
         .detail-text strong {
@@ -488,28 +582,89 @@
         }
 
         .intro-headlines {
-            text-align: center;
+            text-align: right;
             margin-bottom: 2rem;
         }
 
         .intro-headlines p {
-            font-size: 1.3rem;
+            font-size: 1.2rem;
             color: var(--pure-white);
             font-weight: 400;
             margin-bottom: 0.5rem;
+            line-height: 1.8;
+        }
+
+        .worth-reading-subtitle {
+            font-family: 'Secular One', 'Heebo', sans-serif;
+            font-size: 1.6rem;
+            color: var(--royal-magenta);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px var(--magenta-glow);
+        }
+
+        .section-heading {
+            font-family: 'Secular One', 'Heebo', sans-serif;
+            font-size: 1.5rem;
+            color: var(--electric-cyan);
+            margin: 2rem 0 1rem;
+            text-shadow: 0 0 12px var(--cyan-glow);
+            text-align: right;
+        }
+
+        .highlight-heading {
+            color: var(--royal-magenta);
+            text-shadow: 0 0 15px var(--magenta-glow);
+        }
+
+        .highlight-text-large {
+            font-size: 1.3rem;
+            color: var(--pure-white);
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+        }
+
+        .closing-statement {
+            margin-top: 2rem;
+            padding: 1.5rem;
+            background: rgba(160, 64, 160, 0.15);
+            border-radius: 12px;
+            text-align: right;
+            border-right: 4px solid var(--royal-magenta);
         }
 
         .long-text {
             font-size: 1.05rem;
             line-height: 1.9;
+            text-align: right;
         }
 
         .long-text p {
             margin-bottom: 1.5rem;
         }
 
+        .highlight-box {
+            margin: 2rem 0;
+            padding: 2rem;
+            background: linear-gradient(135deg, 
+                rgba(80, 40, 120, 0.9) 0%, 
+                rgba(160, 64, 160, 0.8) 50%,
+                rgba(200, 100, 150, 0.7) 100%);
+            border-radius: 16px;
+            text-align: right;
+        }
+
+        .highlight-box p {
+            margin-bottom: 1rem;
+            color: var(--pure-white);
+        }
+
+        .highlight-box p:last-child {
+            margin-bottom: 0;
+        }
+
         .pivot-section {
             margin: 2.5rem 0;
+            text-align: right;
             padding: 2rem;
             background: rgba(0, 240, 255, 0.05);
             border-radius: 12px;
@@ -612,6 +767,66 @@
             padding: 1.5rem;
             background: rgba(160, 64, 160, 0.1);
             border-radius: 12px;
+        }
+
+        /* Target Audience Section */
+        .target-audience {
+            padding: 4rem 0;
+        }
+
+        .target-audience .audience-box {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .audience-icon {
+            margin-bottom: 1.5rem;
+        }
+
+        .audience-icon svg {
+            filter: drop-shadow(0 0 10px var(--cyan-glow));
+        }
+
+        .audience-title {
+            font-family: 'Secular One', 'Heebo', sans-serif;
+            font-size: 1.8rem;
+            color: var(--electric-cyan);
+            margin-bottom: 1.5rem;
+            text-shadow: 0 0 15px var(--cyan-glow);
+        }
+
+        .audience-main-text {
+            font-size: 1.2rem;
+            color: var(--pure-white);
+            line-height: 1.8;
+            margin-bottom: 1rem;
+        }
+
+        .audience-note {
+            font-size: 1rem;
+            color: var(--soft-text);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            opacity: 0.8;
+        }
+
+        .audience-highlight {
+            font-size: 1.3rem;
+            color: var(--pure-white);
+            margin-bottom: 2rem;
+        }
+
+        .audience-highlight .highlight-text {
+            color: var(--royal-magenta);
+            font-weight: 700;
+            text-shadow: 0 0 10px var(--magenta-glow);
+        }
+
+        .audience-cta {
+            display: inline-block;
+            padding: 1rem 2.5rem;
+            font-size: 1.1rem;
         }
 
         /* ============================================
@@ -783,6 +998,10 @@
             margin: 0;
         }
 
+        footer > .container > p {
+            margin-top: 2rem;
+        }
+
         /* ============================================
            Utility Classes
         ============================================ */
@@ -859,27 +1078,32 @@
             }
 
             .hero-small-title {
-                font-size: 1.1rem;
+                font-size: 16px;
             }
 
             .hero h1 {
-                font-size: clamp(2.2rem, 11vw, 3.5rem);
+                font-size: 48px;
                 white-space: normal;
             }
 
             .hero-subtitle {
-                font-size: 1.3rem;
+                font-size: 24px;
             }
 
             .hero-text {
-                font-size: 1.1rem;
+                font-size: 18px;
+            }
+
+            .hero-pre-cta {
+                font-size: 20px;
             }
 
             .hero-background::after {
                 background: linear-gradient(
                     to bottom,
-                    rgba(26, 11, 46, 0.6) 0%,
-                    rgba(26, 11, 46, 0.85) 100%
+                    rgba(26, 11, 46, 0.5) 0%,
+                    rgba(26, 11, 46, 0.85) 60%,
+                    rgba(26, 11, 46, 0.95) 100%
                 );
             }
 
@@ -964,11 +1188,18 @@
         </div>
         <div class="container">
             <div class="hero-content animate-in">
-                <p class="hero-small-title">אם את זמרת יוצרת במטרה שישמעו את הקול שלך</p>
+                <p class="hero-small-title">אחרי עשרות זמרות שעברו, למדו ומיישמות את השיטה שלנו -<br>הגיע הזמן שלך!</p>
                 <h1>זמרת יוצרת דרך</h1>
-                <p class="hero-subtitle">השיטה האסטרטגית לפיצוח זהות וקהל יעד בדרך לבמה ולשירים שלך.</p>
+                <p class="hero-subtitle">השיטה האסטרטגית לפיצוח זהות וקהל יעד בדרך לבמה ושירים משלך.</p>
                 <p class="hero-text">זאת השיטה שעזרה לעוד עשרות זמרות לבנות מנגנון הצלחה מבוסס זהות, שמושך קהל מדויק ונותן לך את המקום שמגיע לך באמת. בלי תלות, ומבלי לרדוף אחרי מפיקות ואנשים בתעשייה.</p>
+                <p class="hero-pre-cta">יש לנו בשבילך הצעה שלא תוכלי לסרב לה!</p>
             </div>
+        </div>
+        
+        <!-- Scroll Indicator -->
+        <div class="scroll-indicator">
+            <span class="chevron"></span>
+            <span class="scroll-text">גלול למטה</span>
         </div>
     </section>
 
@@ -978,24 +1209,41 @@
     <section class="workshop-details">
         <div class="container">
             <div class="neon-border reveal">
-                <h2 class="text-center">הגיע הזמן שלך!</h2>
+                <h2 class="text-center">הדרך להשמיע את הקול שלך לעולם!</h2>
+                <p class="workshop-subtitle">סדנה של 4 שעות שתשנה לך את כל מה שהכרת עד היום על הדרך להביא את הקול שלך לעולם עם במה ושירים משלך!</p>
                 
                 <div class="details-grid">
                     <div class="detail-item">
-                        <span class="detail-icon">📅</span>
-                        <p class="detail-text"><strong>מתי?</strong> יום ראשון, 25 בינואר (ז' בשבט).</p>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <rect x="7" y="14" width="3" height="3"></rect>
+                            </svg>
+                        </span>
+                        <p class="detail-text"><strong>מתי?</strong> יום שלישי, 27 בינואר (ט' בשבט).</p>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-icon">⏰</span>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </span>
                         <p class="detail-text"><strong>שעות:</strong> 10:00–14:00 (4 שעות שישנו לך את הקול!)</p>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-icon">📍</span>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </span>
                         <p class="detail-text"><strong>איפה?</strong> מתחם WIGBOX, קרית המדע 3, הר חוצבים, ירושלים.</p>
                     </div>
                 </div>
-                
-                <p class="notice text-center">⚠️ שימי לב: זהו מפגש פיזי, לא זום!</p>
                 
                 <div class="text-center mt-2">
                     <a href="https://mrng.to/PIcB5SlP5z" class="cta-button">כן, אני רוצה לשריין מקום לסדנה ולהשמיע את הקול שלי לעולם!</a>
@@ -1018,11 +1266,20 @@
             <div class="cards-grid">
                 <div class="card reveal">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--electric-cyan);">
-                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                            <circle cx="9" cy="7" r="4"></circle>
-                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-                            <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                        <svg width="60" height="60" viewBox="0 0 64 64" fill="none" stroke="url(#iconGradient1)" stroke-width="2">
+                            <defs>
+                                <linearGradient id="iconGradient1" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff00ff"/>
+                                    <stop offset="100%" style="stop-color:#00ffff"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Three people icon - centered in 8-56 range -->
+                            <circle cx="32" cy="18" r="7"/>
+                            <path d="M22 50v-5a10 10 0 0 1 20 0v5"/>
+                            <circle cx="14" cy="24" r="5"/>
+                            <path d="M8 50v-4a8 8 0 0 1 8-8"/>
+                            <circle cx="50" cy="24" r="5"/>
+                            <path d="M56 50v-4a8 8 0 0 0-8-8"/>
                         </svg>
                     </div>
                     <h3>נטוורקינג איכותי</h3>
@@ -1031,11 +1288,26 @@
                 
                 <div class="card reveal">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--electric-cyan);">
-                            <line x1="12" y1="20" x2="12" y2="10"></line>
-                            <line x1="18" y1="20" x2="18" y2="4"></line>
-                            <line x1="6" y1="20" x2="6" y2="16"></line>
-                            <path d="M3 3l18 18"></path>
+                        <svg width="60" height="60" viewBox="0 0 64 64" fill="none" stroke="url(#iconGradient2)" stroke-width="2">
+                            <defs>
+                                <linearGradient id="iconGradient2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff00ff"/>
+                                    <stop offset="100%" style="stop-color:#00ffff"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- Stage/theater icon - centered in 8-56 range -->
+                            <rect x="8" y="8" width="48" height="36" rx="2"/>
+                            <line x1="8" y1="16" x2="56" y2="16"/>
+                            <circle cx="14" cy="12" r="2" fill="url(#iconGradient2)"/>
+                            <circle cx="22" cy="12" r="2" fill="url(#iconGradient2)"/>
+                            <circle cx="30" cy="12" r="2" fill="url(#iconGradient2)"/>
+                            <!-- Stage curtains -->
+                            <path d="M12 16 L12 44 Q20 36 28 44 L28 16"/>
+                            <path d="M36 16 L36 44 Q44 36 52 44 L52 16"/>
+                            <!-- Spotlights at bottom -->
+                            <circle cx="20" cy="52" r="3"/>
+                            <circle cx="32" cy="52" r="3"/>
+                            <circle cx="44" cy="52" r="3"/>
                         </svg>
                     </div>
                     <h3>גישה עסקית נכונה</h3>
@@ -1044,11 +1316,24 @@
                 
                 <div class="card reveal">
                     <div class="card-icon">
-                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="color: var(--electric-cyan);">
-                            <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"></path>
-                            <path d="M19 10v2a7 7 0 0 1-14 0v-2"></path>
-                            <line x1="12" y1="19" x2="12" y2="23"></line>
-                            <line x1="8" y1="23" x2="16" y2="23"></line>
+                        <svg width="60" height="60" viewBox="0 0 64 64" fill="none" stroke="url(#iconGradient3)" stroke-width="2">
+                            <defs>
+                                <linearGradient id="iconGradient3" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff00ff"/>
+                                    <stop offset="100%" style="stop-color:#00ffff"/>
+                                </linearGradient>
+                            </defs>
+                            <!-- ID Card/Badge icon - centered in 8-56 range -->
+                            <rect x="8" y="10" width="48" height="44" rx="4"/>
+                            <!-- Card hole for lanyard -->
+                            <circle cx="50" cy="32" r="3"/>
+                            <!-- Person avatar -->
+                            <circle cx="24" cy="28" r="7"/>
+                            <path d="M13 50 a11 11 0 0 1 22 0"/>
+                            <!-- Text lines -->
+                            <line x1="40" y1="22" x2="52" y2="22"/>
+                            <line x1="40" y1="32" x2="50" y2="32"/>
+                            <line x1="40" y1="42" x2="52" y2="42"/>
                         </svg>
                     </div>
                     <h3>זהות אומנותית ייחודית</h3>
@@ -1064,50 +1349,7 @@
     </section>
 
     <!-- ============================================
-         Section 4: Worth Reading
-    ============================================ -->
-    <section class="worth-reading">
-        <div class="container">
-            <div class="neon-border reveal">
-                <h2 class="text-center">שווה לקרוא: ממנו אליכן</h2>
-                
-                <div class="intro-headlines">
-                    <p>זמרת יוצרת, יש לך שירים במגירה...</p>
-                    <p>אבל את עדיין לא שם...</p>
-                    <p>עצרי שניה...</p>
-                </div>
-                
-                <div class="long-text">
-                    <p>זמרת יוצרת, יש לך שירים במגירה. הופעת על במות. את משקיעה בפיתוח שלך. כל מי ששומע אותך אומר שאת מרגשת, שאת נכנסת ישר ללב. אבל את עדיין לא שם. לא שומעים אותך באמת. לא רואים אותך בפרונט. ואת מרגישה שאת רחוקה מהמקום שמגיע לך להיות בו.</p>
-                    
-                    <p>עצרי שניה. תשכחי רגע מכל מה שסיפרו לך, ומכל מה שהכרת עד היום על תעשיית המוזיקה.</p>
-                    
-                    <p>תהיי כנה עם עצמך רגע: כמה פעמים יצרת שירים, הקלטת סקיצות, הלכת לפיתוח קול, לקחת ייעוצים, רצית או אפילו ישבת לבנות מופע? כמה פעמים דיברת עם מפיקות, חתרת לשיתופי פעולה, ואולי אפילו הצלחת?</p>
-                    
-                    <p>אבל בסוף, את עדיין מרגישה מתוסכלת. את רואה זמרות אחרות מופיעות, ממלאות אולמות, והלב שלך מתכווץ. את יודעת שמגיע לך טיפה יותר הכרה ומקום.</p>
-                    
-                    <p>משהו שם עדיין לא קורה. עדיין לא רואים אותך. לא מספיק שומעים אותך. ואת עדיין לא על הבמה שאת רוצה ונכונה לך, כמו שמגיע לך באמת.</p>
-                    
-                    <div class="pivot-section">
-                        <p>אם כל מה שקראת עד עכשיו הרגיש לך כאילו דיברנו עלייך – זה לא מקרי. הסיבה שאת תקועה היא לא הכישרון שלך. הסיבה היא שפעלת בדרך הישנה. אולי זה בגלל שאמרו לך שבשביל להגיע אל הבמה את צריכה לרדוף אחרי מפיקות, ללמוד לנגן ולהופיע – ובדרך נשחקת.</p>
-                        
-                        <p><strong>אבל יש דרך אחרת. דרך שלא דומה לשום דבר שניסית עד עכשיו.</strong></p>
-                    </div>
-                    
-                    <p>יש לך קול יפה. את זמרת יוצרת. ומגיע לך שישמעו אותך באמת. אבל היום זה כבר לא מספיק. את צריכה מנגנון הצלחה מבוסס זהות, שמושך אלייך קהל מדויק ונותן לך את המקום שמגיע לך באמת – בלי תלות ומבלי לרדוף אחרי מפיקות ואנשים בתעשייה.</p>
-                    
-                    <p>אחרי שישבנו עם מעל ל-100 זמרות, ליווינו עשרות בתהליכי עומק עם ניסיון של שנים בתעשייה – פיצחנו שיטה ייחודית. שתלמד אותך מהי הדרך הנכונה והמדויקת לך, שתשמיע אותך לעולם ותעלה אותך על הבמה.</p>
-                    
-                    <p>אנחנו פותחים לך דלת לסדנה ייחודית של 4 שעות, בה נחשוף בפנייך את השיטה הייחודית שלנו. השיטה שעזרה לעוד זמרות בדיוק כמוך: להבין את המקום שלהן, לפצח את הזהות שלהן, ולהביא את עצמן למצב ששומעים אותן והן בדרך למקום המדויק שמגיע להן להיות בו.</p>
-                    
-                    <p><strong>זאת השיטה שתשמיע אותך לעולם ותעלה אותך על הבמה. סוף סוף המרדף יפסק, ותיפתח לך דלת חדשה לעבר הבמה שלך.</strong></p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ============================================
-         Section 5: Who We Are
+         Section 4: Who We Are
     ============================================ -->
     <section class="who-we-are">
         <div class="container">
@@ -1162,6 +1404,73 @@
     </section>
 
     <!-- ============================================
+         Section: Target Audience Notice
+    ============================================ -->
+    <section class="target-audience">
+        <div class="container">
+            <div class="neon-border audience-box reveal">
+                <div class="audience-icon">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="url(#audienceGradient)" stroke-width="1.5">
+                        <defs>
+                            <linearGradient id="audienceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#ff00ff"/>
+                                <stop offset="100%" style="stop-color:#00ffff"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                    </svg>
+                </div>
+                <h3 class="audience-title">למי הסדנה הזו מיועדת?</h3>
+                <p class="audience-main-text">הסדנה הזו מיועדת <strong>אך ורק לזמרות יוצרות</strong>, שמבינות שצריך לעשות דרך בשביל לעלות על במה משלהן ולהשמיע את הקול שלהן לעולם.</p>
+                <p class="audience-note">(אם זה לא מדבר אלייך - בבקשה אל תרכשי כרטיס, כי זה מייצר עבודה כפולה!)</p>
+                <p class="audience-highlight">אבל אם זה כן מדבר אלייך? <span class="highlight-text">זאת סדנה חובה!</span></p>
+                <a href="https://meshek97.activetrail.biz/sadnaalitotzeret" class="cta-button audience-cta" target="_blank" rel="noopener noreferrer">כן, אני רוצה לשריין מקום לסדנה ולהשמיע את הקול שלי לעולם!</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Section 5: Worth Reading
+    ============================================ -->
+    <section class="worth-reading">
+        <div class="container">
+            <div class="neon-border reveal">
+                <h2 class="text-center">שווה לקרוא:</h2>
+                <h3 class="text-center worth-reading-subtitle">ממנו אלייך</h3>
+                
+                <div class="intro-headlines">
+                    <p>את זמרת יוצרת, יש לך שירים במגירה. הופעת על במות. את משקיעה בפיתוח שלך. כל מי ששומע אותך אומר שאת מרגשת, אבל את עדיין לא שם. לא שומעים אותך באמת. לא רואים אותך בפרונט. ואת מרגישה שאת רחוקה מהמקום שמגיע לך להיות בו.</p>
+                </div>
+                
+                <div class="long-text">
+                    <h4 class="section-heading">עצרי שניה!</h4>
+                    <p>תשכחי רגע מכל מה שסיפרו לך, ומכל מה שהכרת עד היום על תעשיית המוזיקה.</p>
+                    
+                    <h4 class="section-heading highlight-heading">את לא לבד!</h4>
+                    <p class="highlight-text-large">אנחנו פה לעשות את זה איתך יחד!</p>
+                    
+                    <p>הסיבה שאת תקועה היא לא הכישרון שלך. הסיבה היא שפעלת בדרך הישנה. אולי זה בגלל שאמרו לך שבשביל להגיע אל הבמה את צריכה לרדוף אחרי מפיקות, ללמוד לנגן ולהופיע – ובדרך נשחקת.</p>
+                    
+                    <p><strong>וזה הגיוני – אבל יש דרך אחרת. דרך שלא דומה לשום דבר שניסית עד עכשיו.</strong></p>
+                    
+                    <p>יש לך קול יפה. את זמרת יוצרת. ומגיע לך שישמעו אותך באמת!</p>
+                    
+                    <p>אבל היום זה כבר לא מספיק. היום את צריכה מנגנון הצלחה מבוסס זהות, שמושך אלייך קהל מדויק ונותן לך את המקום שמגיע לך באמת – בלי תלות ומבלי לרדוף אחרי מפיקות ואנשים בתעשייה.</p>
+                    
+                    <div class="highlight-box">
+                        <p>אחרי שישבנו עם מעל ל-100 זמרות, ליווינו עשרות בתהליכי עומק עם ניסיון של שנים בתעשייה – פיצחנו שיטה ייחודית. שתלמד אותך מהי הדרך הנכונה והמדויקת לך, שתשמיע אותך לעולם ותעלה אותך על הבמה.</p>
+                        <p><strong>וזאת הסיבה שאנחנו פותחים לך דלת לסדנה ייחודית של 4 שעות, בה נחשוף בפנייך את הדרך להשמיע את הקול שלך לעולם!</strong></p>
+                    </div>
+                    
+                    <p>זאת השיטה שעזרה לעוד זמרות בדיוק כמוך: להבין את המקום שלהן, לפצח את הזהות שלהן, ולהביא את עצמן למצב ששומעים אותן והן בדרך למקום המדויק שמגיע להן להיות בו.</p>
+                    
+                    <p class="closing-statement"><strong>זאת השיטה שתשמיע אותך לעולם ותעלה אותך על הבמה. סוף סוף המרדף שלך יפסק, ותיפתח לך דלת חדשה לעבר הבמה שלך.</strong></p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
          Section 6: Workshop Details Repeat + CTA
     ============================================ -->
     <section class="workshop-details">
@@ -1171,20 +1480,36 @@
                 
                 <div class="details-grid">
                     <div class="detail-item">
-                        <span class="detail-icon">📅</span>
-                        <p class="detail-text"><strong>מתי?</strong> יום ראשון, 25 בינואר (ז' בשבט).</p>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                                <line x1="16" y1="2" x2="16" y2="6"></line>
+                                <line x1="8" y1="2" x2="8" y2="6"></line>
+                                <line x1="3" y1="10" x2="21" y2="10"></line>
+                                <rect x="7" y="14" width="3" height="3"></rect>
+                            </svg>
+                        </span>
+                        <p class="detail-text"><strong>מתי?</strong> יום שלישי, 27 בינואר (ט' בשבט).</p>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-icon">⏰</span>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                            </svg>
+                        </span>
                         <p class="detail-text"><strong>שעות:</strong> 10:00–14:00 (4 שעות שישנו לך את הקול!)</p>
                     </div>
                     <div class="detail-item">
-                        <span class="detail-icon">📍</span>
+                        <span class="detail-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </span>
                         <p class="detail-text"><strong>איפה?</strong> מתחם WIGBOX, קרית המדע 3, הר חוצבים, ירושלים.</p>
                     </div>
                 </div>
-                
-                <p class="notice text-center">שימי לב: זהו מפגש פיזי, לא זום!</p>
                 
                 <div class="text-center mt-2">
                     <a href="https://mrng.to/PIcB5SlP5z" class="cta-button">כן, אני רוצה לשריין מקום לסדנה ולהשמיע את הקול שלי לעולם!</a>
@@ -1229,8 +1554,6 @@
     ============================================ -->
     <footer>
         <div class="container">
-            <p>זמרת על הבמה 2026</p>
-            
             <div class="footer-social">
                 <p class="footer-social-title">הצטרפי לקהילה הסגורה שלנו לזמרות</p>
                 <a href="https://chat.whatsapp.com/DQ6U9YY1J1I4TlvN15jVvU" target="_blank" rel="noopener noreferrer" class="whatsapp-community-btn">
@@ -1240,6 +1563,8 @@
                     הצטרפי לקבוצת הוואטסאפ
                 </a>
             </div>
+            
+            <p>זמרת יוצרת דרך 2026</p>
         </div>
     </footer>
 
