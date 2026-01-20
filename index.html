@@ -804,10 +804,42 @@
             box-sizing: border-box;
             border-radius: 20px;
             overflow: hidden;
-            background: var(--deep-midnight-violet);
-            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4),
-                        0 0 0 2px var(--electric-cyan),
-                        0 0 0 4px var(--royal-magenta);
+            background: rgba(37, 20, 64, 0.95);
+            position: relative;
+            padding: 1rem;
+        }
+
+        .carousel-slide::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 20px;
+            padding: 3px;
+            background: linear-gradient(135deg, 
+                var(--electric-cyan) 0%, 
+                var(--electric-cyan) 30%,
+                var(--royal-magenta) 70%, 
+                var(--soft-harmony-rose) 100%);
+            -webkit-mask: 
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        .carousel-slide::after {
+            content: '';
+            position: absolute;
+            inset: -8px;
+            border-radius: 28px;
+            background: linear-gradient(135deg, 
+                rgba(0, 240, 255, 0.4) 0%, 
+                rgba(160, 64, 160, 0.4) 50%, 
+                rgba(216, 167, 177, 0.3) 100%);
+            filter: blur(20px);
+            z-index: -1;
+            opacity: 0.7;
         }
 
         .carousel-slide img {
@@ -815,6 +847,11 @@
             height: auto;
             display: block;
             cursor: pointer;
+            border-radius: 12px;
+            background: linear-gradient(180deg, 
+                #1A0B2E 0%, 
+                #251440 50%,
+                #1A0B2E 100%);
         }
 
         .carousel-slide-video video {
@@ -822,6 +859,7 @@
             height: auto;
             display: block;
             background: #000;
+            border-radius: 12px;
         }
 
         .carousel-btn {
@@ -925,7 +963,8 @@
 
         @media (max-width: 768px) {
             .carousel-container {
-                max-width: 90%;
+                max-width: 85%;
+                padding: 0 50px;
             }
 
             .carousel-btn {
@@ -934,21 +973,31 @@
             }
 
             .carousel-btn-prev {
-                right: -50px;
+                right: 0;
             }
 
             .carousel-btn-next {
-                left: -50px;
+                left: 0;
             }
         }
 
         @media (max-width: 480px) {
+            .carousel-container {
+                max-width: 100%;
+                padding: 0 45px;
+            }
+
+            .carousel-btn {
+                width: 36px;
+                height: 36px;
+            }
+
             .carousel-btn-prev {
-                right: -45px;
+                right: 0;
             }
 
             .carousel-btn-next {
-                left: -45px;
+                left: 0;
             }
         }
 
@@ -1371,7 +1420,7 @@
         </div>
         <div class="container">
             <div class="hero-content animate-in">
-                <p class="hero-small-title">אחרי עשרות זמרות שעברו, למדו ומיישמות את השיטה שלנו -<br>הגיע הזמן שלך!</p>
+                <p class="hero-small-title">אחרי עשרות זמרות שלמדו ומיישמות את השיטה שלנו -<br>הגיע הזמן שלך!</p>
                 <h1>זמרת יוצרת דרך</h1>
                 <p class="hero-subtitle">השיטה האסטרטגית לפיצוח זהות וקהל יעד בדרך לבמה ושירים משלך.</p>
                 <p class="hero-text">זאת השיטה שעזרה לעוד עשרות זמרות לבנות מנגנון הצלחה מבוסס זהות, שמושך קהל מדויק ונותן לך את המקום שמגיע לך באמת. בלי תלות, ומבלי לרדוף אחרי מפיקות ואנשים בתעשייה.</p>
@@ -1532,55 +1581,6 @@
     </section>
 
     <!-- ============================================
-         Section: Testimonials Carousel
-    ============================================ -->
-    <section class="testimonials">
-        <div class="container">
-            <h2 class="text-center reveal">זמרות מספרות:</h2>
-            
-            <div class="carousel-container reveal">
-                <button class="carousel-btn carousel-btn-prev" aria-label="הקודם">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="9 18 15 12 9 6"></polyline>
-                    </svg>
-                </button>
-                
-                <div class="carousel-wrapper">
-                    <div class="carousel-track">
-                        <div class="carousel-slide carousel-slide-video">
-                            <video controls playsinline preload="metadata">
-                                <source src="assets/testimonials/VIDEO2.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="carousel-slide carousel-slide-video">
-                            <video controls playsinline preload="metadata">
-                                <source src="assets/testimonials/VIDEO.mp4" type="video/mp4">
-                            </video>
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/testimonials/1.png" alt="המלצה 1" loading="lazy">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/testimonials/2.png" alt="המלצה 2" loading="lazy">
-                        </div>
-                        <div class="carousel-slide">
-                            <img src="assets/testimonials/3.png" alt="המלצה 3" loading="lazy">
-                        </div>
-                    </div>
-                </div>
-                
-                <button class="carousel-btn carousel-btn-next" aria-label="הבא">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                        <polyline points="15 18 9 12 15 6"></polyline>
-                    </svg>
-                </button>
-            </div>
-            
-            <div class="carousel-dots"></div>
-        </div>
-    </section>
-
-    <!-- ============================================
          Section 4: Who We Are
     ============================================ -->
     <section class="who-we-are">
@@ -1632,6 +1632,55 @@
             <div class="team-closing reveal">
                 <p>לא באנו ללמד תיאוריה, אלא להביא את השטח. אנחנו לא סוכנות - אנחנו דרך.</p>
             </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Section: Testimonials Carousel
+    ============================================ -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center reveal">זמרות מספרות:</h2>
+            
+            <div class="carousel-container reveal">
+                <button class="carousel-btn carousel-btn-prev" aria-label="הקודם">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-slide carousel-slide-video">
+                            <video controls playsinline preload="metadata">
+                                <source src="assets/testimonials/VIDEO2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carousel-slide carousel-slide-video">
+                            <video controls playsinline preload="metadata">
+                                <source src="assets/testimonials/VIDEO.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/1.png" alt="המלצה 1" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/2.png" alt="המלצה 2" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/3.png" alt="המלצה 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-next" aria-label="הבא">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
