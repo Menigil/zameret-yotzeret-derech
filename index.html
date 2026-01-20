@@ -769,6 +769,189 @@
             border-radius: 12px;
         }
 
+        /* Testimonials Carousel Section */
+        .testimonials {
+            padding: 5rem 0;
+            overflow: hidden;
+        }
+
+        .testimonials h2 {
+            margin-bottom: 3rem;
+        }
+
+        .carousel-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .carousel-wrapper {
+            overflow: hidden;
+            border-radius: 20px;
+            flex: 1;
+        }
+
+        .carousel-track {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel-slide {
+            min-width: 100%;
+            box-sizing: border-box;
+            border-radius: 20px;
+            overflow: hidden;
+            background: var(--deep-midnight-violet);
+            box-shadow: 0 4px 25px rgba(0, 0, 0, 0.4),
+                        0 0 0 2px var(--electric-cyan),
+                        0 0 0 4px var(--royal-magenta);
+        }
+
+        .carousel-slide img {
+            width: 100%;
+            height: auto;
+            display: block;
+            cursor: pointer;
+        }
+
+        .carousel-slide-video video {
+            width: 100%;
+            height: auto;
+            display: block;
+            background: #000;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 50px;
+            height: 50px;
+            border: 2px solid var(--electric-cyan);
+            border-radius: 50%;
+            background: rgba(26, 11, 46, 0.9);
+            color: var(--electric-cyan);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+            z-index: 10;
+            box-shadow: 0 0 15px var(--cyan-glow);
+        }
+
+        .carousel-btn:hover {
+            background: var(--electric-cyan);
+            color: var(--deep-midnight-violet);
+            box-shadow: 0 0 25px var(--cyan-glow);
+        }
+
+        .carousel-btn-prev {
+            right: -70px;
+        }
+
+        .carousel-btn-next {
+            left: -70px;
+        }
+
+        .carousel-dots {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-top: 2rem;
+        }
+
+        .carousel-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(0, 240, 255, 0.3);
+            border: 2px solid var(--electric-cyan);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .carousel-dot.active {
+            background: var(--electric-cyan);
+            box-shadow: 0 0 10px var(--cyan-glow);
+        }
+
+        .carousel-dot:hover {
+            background: rgba(0, 240, 255, 0.6);
+        }
+
+        /* Lightbox */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            border-radius: 12px;
+            box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+        }
+
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            color: var(--pure-white);
+            font-size: 40px;
+            cursor: pointer;
+            transition: color 0.3s ease;
+        }
+
+        .lightbox-close:hover {
+            color: var(--electric-cyan);
+        }
+
+        @media (max-width: 768px) {
+            .carousel-container {
+                max-width: 90%;
+            }
+
+            .carousel-btn {
+                width: 40px;
+                height: 40px;
+            }
+
+            .carousel-btn-prev {
+                right: -50px;
+            }
+
+            .carousel-btn-next {
+                left: -50px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .carousel-btn-prev {
+                right: -45px;
+            }
+
+            .carousel-btn-next {
+                left: -45px;
+            }
+        }
+
         /* Target Audience Section */
         .target-audience {
             padding: 4rem 0;
@@ -1078,11 +1261,7 @@
             }
 
             .hero-small-title {
-                font-size: 15px;
-            }
-
-            .hero-small-title br {
-                display: none;
+                font-size: 16px;
             }
 
             .hero h1 {
@@ -1340,7 +1519,7 @@
                             <line x1="40" y1="42" x2="52" y2="42"/>
                         </svg>
                     </div>
-                    <h3>זהות אומנותית ייחודית</h3>
+                    <h3>זהות אומנותית משלך</h3>
                     <p>אלישבע תדבר על איך להשתמש בזהות האומנותית שלך כבסיס חזק, שיבדל אותך משאר הזמרות וימשוך אלייך את הקהל שנכון ומדוייק לך.</p>
                 </div>
             </div>
@@ -1349,6 +1528,55 @@
                 <p>כל זה ב-4 שעות מרוכזות, בהן נחשוף בפנייך את השיטה הייחודית שלנו, שתשמיע את הקול שלך לעולם ותעלה אותך על הבמה.</p>
                 <p><strong>סוף סוף המרדף ייפסק, ותיפתח לך דלת חדשה לעבר הבמה שלך.</strong></p>
             </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         Section: Testimonials Carousel
+    ============================================ -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="text-center reveal">זמרות מספרות:</h2>
+            
+            <div class="carousel-container reveal">
+                <button class="carousel-btn carousel-btn-prev" aria-label="הקודם">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="9 18 15 12 9 6"></polyline>
+                    </svg>
+                </button>
+                
+                <div class="carousel-wrapper">
+                    <div class="carousel-track">
+                        <div class="carousel-slide carousel-slide-video">
+                            <video controls playsinline preload="metadata">
+                                <source src="assets/testimonials/VIDEO2.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carousel-slide carousel-slide-video">
+                            <video controls playsinline preload="metadata">
+                                <source src="assets/testimonials/VIDEO.mp4" type="video/mp4">
+                            </video>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/1.png" alt="המלצה 1" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/2.png" alt="המלצה 2" loading="lazy">
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="assets/testimonials/3.png" alt="המלצה 3" loading="lazy">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="carousel-btn carousel-btn-next" aria-label="הבא">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <polyline points="15 18 9 12 15 6"></polyline>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="carousel-dots"></div>
         </div>
     </section>
 
@@ -1597,7 +1825,132 @@
                 observer.observe(reveal);
             });
         });
+
+        // Testimonials Carousel
+        const track = document.querySelector('.carousel-track');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const prevBtn = document.querySelector('.carousel-btn-prev');
+        const nextBtn = document.querySelector('.carousel-btn-next');
+        const dotsContainer = document.querySelector('.carousel-dots');
+        
+        let currentSlide = 0;
+        const totalSlides = slides.length;
+
+        // Create dots
+        slides.forEach((_, index) => {
+            const dot = document.createElement('button');
+            dot.classList.add('carousel-dot');
+            if (index === 0) dot.classList.add('active');
+            dot.addEventListener('click', () => goToSlide(index));
+            dotsContainer.appendChild(dot);
+        });
+
+        const dots = document.querySelectorAll('.carousel-dot');
+
+        function updateCarousel() {
+            track.style.transform = `translateX(${currentSlide * 100}%)`;
+            dots.forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            
+            // Pause all videos when sliding
+            const videos = document.querySelectorAll('.carousel-slide video');
+            videos.forEach(video => video.pause());
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            updateCarousel();
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+            updateCarousel();
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide + 1) % totalSlides;
+            updateCarousel();
+        }
+
+        prevBtn.addEventListener('click', prevSlide);
+        nextBtn.addEventListener('click', nextSlide);
+
+        // Keyboard navigation
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight') prevSlide();
+            if (e.key === 'ArrowLeft') nextSlide();
+        });
+
+        // Only one video plays at a time
+        const carouselVideos = document.querySelectorAll('.carousel-slide video');
+        carouselVideos.forEach(video => {
+            video.addEventListener('play', () => {
+                carouselVideos.forEach(otherVideo => {
+                    if (otherVideo !== video && !otherVideo.paused) {
+                        otherVideo.pause();
+                    }
+                });
+            });
+        });
+
+        // Lightbox for images
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        
+        document.querySelectorAll('.carousel-slide img').forEach(img => {
+            img.addEventListener('click', () => {
+                lightboxImg.src = img.src;
+                lightbox.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            document.body.style.overflow = '';
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && lightbox.classList.contains('active')) {
+                lightbox.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
+
+        // Touch/Swipe support
+        let touchStartX = 0;
+        let touchEndX = 0;
+        const carouselWrapper = document.querySelector('.carousel-wrapper');
+
+        carouselWrapper.addEventListener('touchstart', (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+        });
+
+        carouselWrapper.addEventListener('touchend', (e) => {
+            touchEndX = e.changedTouches[0].screenX;
+            handleSwipe();
+        });
+
+        function handleSwipe() {
+            const swipeThreshold = 50;
+            const diff = touchStartX - touchEndX;
+            
+            if (Math.abs(diff) > swipeThreshold) {
+                if (diff > 0) {
+                    nextSlide();
+                } else {
+                    prevSlide();
+                }
+            }
+        }
     </script>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <img id="lightbox-img" src="" alt="תמונה מוגדלת">
+    </div>
 
 </body>
 </html>
